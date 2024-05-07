@@ -1,2 +1,7 @@
-psycopg2
 alembic
+fastapi
+psycopg2
+python-decouple
+requests
+sqlmodel
+uvicorn
