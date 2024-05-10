@@ -1,10 +1,10 @@
-from sqlmodel import Field, SQLModel
+from pydantic import BaseModel
 
 
-class Animal(SQLModel, table=True):
-    id: int | None = Field(default=None, primary_key=True)
-    organization_id: str | None
-    type: str | None
+class AnimalSchema(BaseModel):
+    id: int
+    organization_id: str
+    type: str
     breed: str | None
     color: str | None
     age: str | None
@@ -15,4 +15,4 @@ class Animal(SQLModel, table=True):
     declawed: bool | None
     special_needs: bool | None
     shots_current: bool | None
-    name: str | None
+    name: str
