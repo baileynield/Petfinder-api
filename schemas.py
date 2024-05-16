@@ -16,3 +16,18 @@ class AnimalSchema(BaseModel):
     special_needs: bool | None
     shots_current: bool | None
     name: str
+
+
+
+class UserBase(BaseModel):
+    username: str
+    email: str
+
+class UserCreate(UserBase):
+    pass
+
+class User(UserBase):
+    id: int
+
+    class Config:
+        orm_mode = True
